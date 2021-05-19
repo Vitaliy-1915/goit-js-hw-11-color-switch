@@ -23,12 +23,12 @@ function changeColorStart(event) {
     };
     
     if (onInterval === null) {
-            
+        startBtn.disabled = true;     
         onInterval = setInterval(() => {
         const changeColors = colors[randomIntegerFromInterval(0, colors.length)];
         console.log(colors.length);
         backgroundBody.style.backgroundColor = (changeColors);
-         startBtn.disabled = true;    
+            
     }, 1000);    
     } else {
         return;
