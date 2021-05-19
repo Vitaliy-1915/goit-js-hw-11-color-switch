@@ -27,7 +27,8 @@ function changeColorStart(event) {
         onInterval = setInterval(() => {
         const changeColors = colors[randomIntegerFromInterval(0, colors.length)];
         console.log(colors.length);
-        backgroundBody.style.backgroundColor = (changeColors);    
+        backgroundBody.style.backgroundColor = (changeColors);
+         startBtn.disabled = true;    
     }, 1000);    
     } else {
         return;
@@ -37,7 +38,8 @@ function changeColorStart(event) {
 
     function changeColorStop(event) {
     const btn = event.target.dataset.action;
-    clearInterval(onInterval);
+        clearInterval(onInterval);
+         startBtn.disabled = false;
     };
 };
 
